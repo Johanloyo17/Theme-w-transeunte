@@ -27,14 +27,15 @@ function transeunte_post_types() {
       'add_new_item' => 'Añadir nuevo',
       'edit_item' => 'Editar evento',
       'all_items' => 'Todos los eventos',
-      'singular_name' => 'Evento'
+      'singular_name' => 'Evento',
     ),
-    'menu_icon' => 'dashicons-calendar'
+    'menu_icon' => 'dashicons-calendar',
+    'show_in_rest' => true // Gutenberg editor
   ));
 
   // Contenido Post Type
   register_post_type('contenido', array(
-    'supports' => array('title', 'editor', 'excerpt'),
+    'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'custom-fields'),
     'rewrite' => array(
       'slug' => 'contenidos'
     ),
@@ -48,7 +49,8 @@ function transeunte_post_types() {
       'all_items' => 'Todos los contenidos',
       'singular_name' => 'Contenido'
     ),
-    'menu_icon' => 'dashicons-editor-quote'
+    'menu_icon' => 'dashicons-editor-quote',
+    'show_in_rest' => true // Gutenberg editor
   ));
 }
 
