@@ -12,3 +12,24 @@ function transeunte_features() {
 }
 add_action('after_setup_theme', 'transeunte_features');
 
+function transeunte_post_types() {
+  // Evento Post Type
+  register_post_type('evento', array(
+    'supports' => array('title', 'editor', 'excerpt'),
+    'rewrite' => array(
+      'slug' => 'eventos'
+    ),
+    'has_archive' => true,
+    'public' => true,
+    'labels' => array(
+      'name' => 'Eventos',
+      'add_new_item' => 'Añadir nuevo',
+      'edit_item' => 'Editar evento',
+      'all_items' => 'Todos los eventos',
+      'singular_name' => 'Evento'
+    ),
+    'menu_icon' => 'dashicons-calendar'
+  ));
+}
+
+add_action('init', 'transeunte_post_types');
