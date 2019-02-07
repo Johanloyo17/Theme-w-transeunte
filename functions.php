@@ -15,7 +15,7 @@ add_action('after_setup_theme', 'transeunte_features');
 function transeunte_post_types() {
   // Evento Post Type
   register_post_type('evento', array(
-    'supports' => array('title', 'editor', 'excerpt'),
+    'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'custom-fields'),
     'rewrite' => array(
       'slug' => 'eventos'
     ),
