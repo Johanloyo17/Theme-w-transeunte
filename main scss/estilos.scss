@@ -1,0 +1,1050 @@
+
+//======================importanciones sass============//
+   
+//==============================================//
+
+
+
+
+///////////variables////////
+     $rojo-linea: rgb(255, 4, 58);       
+	 $rojo-t:#b22222;
+     $grey:rgb(238, 238, 238);
+	 $c-back:#8a8a8a;
+    $sizeparallax: 85vh;
+
+///////////variables////////
+
+
+
+
+
+a:hover{
+    color: inherit;
+}
+
+
+
+// scroll styles
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #555; 
+  }
+
+// fin de scroll
+
+body{
+	background-color: #141414;
+}
+
+
+
+
+
+
+
+
+//menu nuevo 
+//.navegacion{
+  //  background-image: url(../img/La-calle-habla.jpg);
+    //background-size: cover;
+//    width: 100%;
+  //  height: 100%;
+    
+
+
+
+
+
+
+
+
+
+
+
+
+.copysPortada{
+    h4{
+        font-weight: 600;
+        padding: 4px 10px;
+        background-color: $rojo-linea;
+        display: inline;
+        font-size: 1rem;
+        text-align: right;   
+        color: #000;
+        border-radius: 3px
+    }
+}
+
+// stard styles
+
+.manifiesto-titulo{
+	 border-bottom: 2px solid $rojo-t;
+	 background-color: #fff;
+	 
+	 h2 {
+		  font-size: 2.5em;
+		  color: #8a8a8a;
+		  text-shadow: 1px 0 #000
+	}
+}
+
+.manifiesto-img{
+	 background-image: url(../img/aprendemos-caminando.jpg);
+	 background-size: cover;
+	 background-position: center;
+	 background-repeat: no-repeat ;
+	 background-attachment: fixed;
+	 width: 100%;
+	 height: $sizeparallax;
+}
+
+.manifiesto-texto{
+	padding: 5vh 0;
+	background-image: url(../icon/Lineas-01.png);
+	background-repeat: repeat;
+   
+	
+
+	.manifiesto-cont-p{  
+		 position: relative; z-index: 2;
+		  text-align: center;
+		  margin: 5vh auto;
+		  width: 85%; 
+		  height: 40vh;
+		  color: #c7c7c7;
+		  overflow-y: scroll;
+		  padding: 0 15px;
+			  
+		  p{
+			   font-size: 1.1em;
+			   margin: 5vh 10px;
+			   font-weight: 500;
+			}
+	}
+}
+
+.manifiesto-footer{
+	background: #555;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 20px;
+
+	&-redes a{
+		font-size:1.7em;	
+		color: #f1f1f1;
+		margin: 0 10px;
+
+		&:hover{
+			color:$rojo-t;
+		}
+	}
+}
+
+
+
+
+
+
+// seccion orgia cultural
+
+
+.orgiaCultural{
+	
+	.orgiaCultural-img{
+		background-image: url(../img/orgia-cultural.jpg);
+		background-attachment: fixed;
+		background-size: cover; 
+		width: 100%;
+		height:$sizeparallax  ;		
+	}
+
+	.orgiaCultural-eventos{
+		display: grid;
+		background-color: #8a8a8a;
+		grid-template-columns: 1fr 1fr 1fr ;
+		grid-auto-rows: 60vh;
+		padding:5px ;
+		
+        
+        
+		.evento{
+            
+            &img{
+                width: 100%;
+                height: 100%;
+                img{
+                    object-fit: cover;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                } 
+                
+            }   
+			
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+// titulo de eventos
+.evento{
+
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(0);
+    overflow: hidden;
+    transition: all .35s ease-in;	
+	
+	
+    
+	&:hover &-title {
+		bottom: 0%;
+	}	
+
+	&-title{
+		position: absolute;
+		bottom: -4vh;
+		width: 100%;
+		height: 10vh;
+		background-color: #171717;
+		display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr ;
+		transition: all .4s ease-in;
+        justify-content: center;
+        
+		
+
+		// tilte hijos
+		& span{
+			grid-column: 1 / 5;
+			text-align: center;
+			font-size: 1.5rem;
+			color: #fff;
+			letter-spacing: 2px;
+			font-weight: 600;
+			transition: all 1s ease-in;
+
+		}
+		&-verMas{
+            grid-row: 3 / 3;
+            grid-column: 2 / 4;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+            padding: 0;
+            
+			span{
+				font-size: .8rem;
+				transition: all ease .7s;
+                color: #000;
+			}	
+			.evento-arrow{
+				font-size: .8rem;
+				color: $rojo-t;
+                margin-left: 10px
+			}
+		}
+        // FIN tilte hijos
+		
+
+	}
+}
+
+
+
+
+
+
+
+
+
+// seccion caminemos 
+
+.caminemos{
+	width: 100%;
+	padding: 0;
+	
+	&-img{
+		background-image: url(../img/caminemos.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
+		width: 100%;
+		height:$sizeparallax;	
+	}
+
+	&-text{
+		padding: 2.5vh;
+        background-color: $grey;
+    
+			
+		div{
+			width: 75%;
+			display: flex;
+			flex-direction: column;
+			
+
+			p , span{
+                font-style: italic;
+                margin: 0;
+                text-align: center;
+                font-size: 1.1rem;
+                line-height: 1.38;
+                font-weight: 600;
+				color: darken(#f1f1f1, 60%);
+			}
+	
+			span{
+                line-height: 1.5;
+
+				color: $rojo-t;
+                
+			}
+		}
+	}
+
+
+
+
+	.proyectos{
+		&-img{
+			background-image: url(../img/eventos.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			
+			width: 100%; height: $sizeparallax / 2;
+		}
+
+		&-proyectos{
+			
+			background-color: #141414;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+
+			.header{
+			height: 10vh;
+
+			}
+			span{
+				font-size: 1.2rem;
+				color:#fff;
+			}
+		}
+	}
+}
+
+
+.cuerpo-proyecto{
+	width: 100%;
+	height: 85vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: $grey;
+    padding: 25px 10px;
+}
+
+
+
+.proyectos-contenido{
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	margin: 10px 0;
+	
+	.proyecto-titulo{
+		font-weight: 800;
+		font-size: 2.5em;
+		margin: 10px 5px;
+
+	}
+	.proyecto-descripcion{
+		font-size: 1.5;
+		margin: 0 20px ;
+		width: 30%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		span{
+			color: #000;
+		font-size: 1.1em;
+
+		}
+
+	}
+}
+
+//  FIN seccion caminemos
+
+
+
+
+
+
+
+
+
+//seccion de contenidos 
+.contenidos{
+	padding: 0;
+	&-img{
+		height:$sizeparallax/2;
+		background-image:url(../img/contenidos.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: left;
+	}
+
+	&-text{
+		background-color: $grey;
+		padding: 1.8vh;
+		display: flex;
+		flex-direction: column;
+        align-items: center;
+		p, span{
+            width: 70%;
+			font-size: 1.2em;		
+			color: #141414;	
+			text-align: center;
+		
+		}
+		span{
+			color: $rojo-t;
+		}
+	}
+	&-queHacemos{
+		display: grid;
+        grid-template-columns: 1fr 1.5fr 1fr ;
+        grid-template-rows: 1fr;
+
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background: #555;
+		
+
+		&-text{
+			position: relative;
+            grid-column: 2;
+			display: flex;
+			justify-content: start;
+			align-content: center;
+			margin: 5vh 0;
+			padding-left: 10%;
+			overflow: hidden;
+            transition: all .5s  ;
+			
+			&:hover{
+				transform: translate(-10%, 0px)
+			}
+			
+           
+            
+            
+			span{
+                display: flex;
+                align-items: center;
+				font-size: 1.5rem; 
+				color: #f1f1f1;
+				
+			}
+		}
+
+
+
+		&-title{
+			grid-column: 1/5;
+			text-align: center;
+			height: 10vh;
+			font-size: 1.3rem;
+			background-color: #141414;
+			display: flex;
+			align-items: center; 
+			justify-content: center;
+
+		}
+
+
+	}
+}
+// Fin seccion de contenidos 
+
+
+.ConNosotros-img{
+    width: 100%;
+    height: $sizeparallax;
+    background-image: url(../img/escuchamos%20tus%20ideas.jpg);
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+
+
+
+
+
+
+
+
+.footPage{ 
+
+	width: 100%;
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr ;
+	grid-template-rows: 1fr 2fr 2fr 1fr;
+	grid-gap: 50px;
+	justify-content: center;
+	background-image: url(../icon/Lineas-01.png);
+	
+    
+    
+    &-text{
+		grid-row: 2;
+		grid-column: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: right;
+        &  p{
+            display: flex;
+            flex-direction: column;
+        }
+        &  p span{
+            line-height: 1;
+             font-weight: 700;
+           font-size: 1.8rem;
+            color: aliceblue;
+        }
+    
+        &-resaltado{
+            line-height: .7;
+    
+           font-size: 1.4rem;
+            color: $rojo-t; 
+        }
+	}
+
+    
+    
+    &-contact{ 
+		grid-column: 1/2;
+		grid-row: 3;
+        text-align: right;
+        color: darken(#fff, 20%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        &-phone{
+            line-height: 1.2;
+            display:flex;
+            flex-direction: column;
+            span{
+                font-size: 1.8rem;
+            }         
+		}
+
+		&-mail{
+			& span{
+				font-size: 1.5rem;
+			}
+		}
+
+        &-city{
+			color: $rojo-t;
+			
+            h5{
+				font-size: 1rem !important;  
+            }
+        }
+        
+        .socialF{
+            flex-direction: row-reverse;
+            
+            .redS:hover{
+                    background: $rojo-linea;
+                    border-radius: 50%;
+            }     
+        }                
+    }
+
+	&-form{
+		grid-column: 2/4;
+		grid-row: 2/4;;
+	}
+}
+
+.Formularios{ 
+    width: 90%;
+    position: sticky;
+    top: 25%;
+    form{
+        background-image: url(../icon/Lineas-01.png);
+        box-shadow: 2px 5px 10px 4px #000;
+        padding: 40px;
+        transition: all .35s linear; 
+        
+        &:hover{
+             box-shadow: 2px 5px 10px 8px #000;
+        }
+    }          
+}
+
+
+
+
+ /* estilos de el fomulatrio de contacto */
+.formDiv{
+     background-color: #d6d6d6
+ } 
+ 
+ .labelForm{
+     line-height: .7;
+     font-size: 1.5em;
+     color: #c7c7c7;
+     margin-inline-start: 10px;
+ }
+ 
+ .formulario{
+     border-radius: 20px;
+     opacity: .7;
+     box-shadow: rgb(41, 41, 41) 1px 3px 3px
+ }
+ 
+ .arroba{
+     box-shadow: rgb(41, 41, 41) 1px 3px 0px
+ 
+ }
+ 
+ .formulario:focus{
+ opacity: 1;
+ box-shadow: 0 0 .1rem .2rem #ff043ab6;
+ }
+ 
+ .boton {
+     background-color: #000;
+     font-size: 1.4em ;
+     letter-spacing: 2px; 
+     padding: 5px 15px ;
+     border-radius: 20px;
+     box-shadow: rgb(41, 41, 41) 1px 3px 3px ;
+     transition: all .3s
+     
+ }
+ 
+ .boton:hover {
+     background-color: #4b0111;
+     box-shadow:  rgb(41, 41, 41) 2px 5px 5px ;
+ }
+
+
+
+.infoCitio , .infoNumero, .infoArroba{
+    color: #c7c7c7;
+    line-height: 5;
+}
+
+.infoCitio h5{
+    font-size: 1em;
+    line-height: .9;
+}
+
+.infoNumero h5{
+    font-size: 1.5em;
+    line-height: .9;
+
+}
+
+.infoArroba h5{
+    font-size: 1em;
+    line-height: .9    
+}
+
+
+
+.pie{
+    background: #000
+}
+
+
+
+
+
+.textF{
+    color: #ccc;
+    h4 , span{
+        font-size: .8rem
+    }
+}
+
+
+
+
+
+
+
+//para exportar
+
+// estilos contenedor de los eventos 
+.evento{
+    position: relative;
+    &-content{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: 2;
+        background: #141414;
+        color: $grey;
+        display: none;
+        justify-content: center;
+        align-items:center;
+        
+        &-text{
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            justify-content: space-around;
+
+            &-title{
+                font-size: 1.5rem;
+                text-align: center;
+                margin: 5% 0;
+                letter-spacing: 2px;
+                
+
+            }
+            
+            &-p{
+                width: 70%;
+                line-height: 1;
+                padding: 2.5% 0;
+                border-top: solid #000 1px;
+                border-bottom: solid #000 1px;
+            }
+            
+            &-info{
+                display: flex;
+                flex-direction: column;
+                line-height: 1;
+                
+                span{
+                    font-size: .8rem;
+                    font-size: .8rem;
+                }
+                
+            }
+            
+        }
+    }   
+}
+
+
+
+.menu{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 2.5vh;
+    width: 40%;
+    
+    .menu-naveg{
+        display: flex;
+        justify-content: center;
+        border: solid 1px $rojo-linea;
+        color: $rojo-t;
+        align-self: center;
+        transition:all .25s linear;
+        padding: 5px;
+        
+    
+        &:hover{
+            color: #fff !important;
+            background-color: $rojo-linea;
+        }
+        
+        &-link{
+            a{
+                h2{
+                    margin:0px !important
+                }
+            }
+        }
+        
+    }
+}
+
+
+
+.boton:hover{
+    border: 2px solid $rojo-linea;
+    background-color: #000; 
+}
+
+.boton{
+    border: 2px solid transparent;
+}
+
+
+.lineaT{
+   position: absolute;
+    right: -8%;
+    height: 8rem;
+    top: 13%;
+    
+    img{
+        height: 100%;
+    }
+}
+
+
+//    pc size
+@media only screen and (max-width: 991px){
+    .orgiaCultural-eventos{
+        grid-template-columns: 1fr 1fr !important;
+    }
+    
+    .evento-title {
+        font-size: 1.2rem;
+    }
+    
+    
+    .proyectos-contenido{
+        .proyecto-titulo{
+            font-size: 1.3rem;
+            align-items: center;
+            display: flex;
+            text-align: right;
+        }
+        .proyecto-descripcion{
+                width: 40%;
+            span{
+                font-size: 1rem,
+            }
+        }    
+    }
+}
+
+
+
+
+@media only screen and (max-width: 768px){
+    .caminemos-img{
+        background-position: 29%, 0;
+    }
+    .ConNosotros-img {
+        background-position: center;
+    }   
+    .orgiaCultural-img{
+            
+        background-position: center;
+    }
+    .menu{
+            width: 75%;
+    }
+    .manifiesto-cont-p{
+        width: 95% !important;
+        height: 50vh !important;
+    }
+      
+    .orgiaCultural-eventos{
+        grid-template-columns: 1fr !important;
+    }
+    
+    .evento-title {
+        font-size: 1.2rem;
+    }
+    .caminemos-text div{
+        width: 90%; 
+        p , span{
+            font-size: 1rem;
+        }
+    }
+    
+    .proyectos-contenido{
+        .proyecto-titulo{
+            font-size: 1.2rem;
+            align-items: center;
+            display: flex;
+        }
+        .proyecto-descripcion{
+            width: 50%;
+            span{
+                font-size: 1rem,
+            }
+        }    
+    }
+    
+    .contenidos-text p, .contenidos-text span{
+        
+        width: 85%;
+        font-size: 1em;
+        
+    }   
+    .contenidos-queHacemos{
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr !important;
+        
+            
+       
+    }
+      
+    .contenidos-queHacemos-text{
+        span{
+            font-size: 1.2rem    
+        }
+    }
+   
+    //responsive footer
+    
+    .footPage{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 2fr;
+        grid-gap: 10px;
+        padding: 25px;        
+        &-text{
+            grid-row: 1;
+            grid-column: 1/4;
+            text-align: left;
+        }       
+        &-contact{
+            grid-column: 1/4;
+            grid-row: 2;
+        }        
+        &-form{
+            grid-column: 1/4;
+            grid-row: 3;
+        }
+        
+    }   
+   .footPage-text p span{
+        font-size: 1.3rem;
+    }
+    .footPage-text-resaltado{
+        font-size: 1.1rem;
+    }
+    .footPage-contact-phone span{
+        font-size: 1.3rem
+    }  
+    .footPage-contact-mail span{
+        font-size: 1.1rem;
+    }
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 590px){
+    .contenidos-img{
+        background-position: right;
+    }
+    
+    .orgiaCultural .orgiaCultural-img{
+        background-position: left !important;
+    }
+    
+    .menu{
+            width: 85%;
+    } 
+   .orgiaCultural-eventos{
+        grid-template-columns: 1fr !important;
+    }  
+    .evento-title {
+        font-size: 1rem;
+    } 
+    .caminemos-text div{
+        width: 95%;
+        
+        p, span{
+            font-size: .90rem;
+        }
+    }
+    .proyectos-contenido{
+        .proyecto-titulo{
+            text-align: right;
+            font-size: 1.2rem;
+            align-items: center;
+            display: flex;
+        }
+        .proyecto-descripcion{
+                width: 45%;
+            span{
+                font-size: .80rem,
+            }
+        }   
+    } 
+    .contenidos-text p, .contenidos-text span{
+        
+        width: 90%;
+        font-size: 1em;
+        
+    }
+    
+    .contenidos-queHacemos{
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr !important;
+        
+    }
+    
+    .contenidos-queHacemos-text{
+        span{
+            font-size: 1.2rem
+        
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

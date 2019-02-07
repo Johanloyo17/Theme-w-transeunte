@@ -1,0 +1,72 @@
+
+
+
+//para exportar
+
+// estilos contenedor de los eventos 
+.evento{
+    position: relative;
+    &-content{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: 2;
+        background: #141414;
+        color: $grey;
+        display: none;
+        justify-content: center;
+        align-items:center;
+        
+        &-text{
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            justify-content: space-around;
+
+            &-title{
+                font-size: 1.5rem;
+                text-align: center;
+                margin: 5% 0;
+                letter-spacing: 2px;
+                
+
+            }
+            
+            &-p{
+                width: 70%;
+                line-height: 1;
+                padding: 2.5% 0;
+                border-top: solid #000 1px;
+                border-bottom: solid #000 1px;
+            }
+            
+            &-info{
+                display: flex;
+                flex-direction: column;
+                line-height: 1;
+                
+                span{
+                    font-size: .8rem;
+                    font-size: .8rem;
+                }
+                
+            }
+            
+        }
+    }   
+}
+
+
+
+
+.maldito{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    border: solid 1px red;
+}
+
+

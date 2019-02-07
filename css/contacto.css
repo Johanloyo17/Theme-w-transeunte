@@ -1,0 +1,120 @@
+/* estilos de la seccion de contacto */
+*{
+     margin: 0 ;
+     padding: 0 ;
+     font-size: 18px;
+ }
+ a{
+     text-decoration: none;
+     color: inherit;
+}
+
+
+ body{
+     background-color: #2b2b2b;
+ }   
+ 
+
+
+
+ .Formularios{
+     width: 70%;
+
+ }
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* estilos de el fomulatrio de contacto */
+
+
+.formDiv{
+     background-color: #d6d6d6
+ } 
+ 
+ .labelForm{
+     line-height: .7;
+     font-size: 1.5em;
+     color: #c7c7c7;
+     margin-inline-start: 10px;
+ }
+ 
+ .formulario{
+     border-radius: 20px;
+     opacity: .7;
+     box-shadow: rgb(41, 41, 41) 1px 3px 3px
+ }
+ 
+ .arroba{
+     box-shadow: rgb(41, 41, 41) 1px 3px 0px
+ 
+ }
+ 
+ .formulario:focus{
+ opacity: 1;
+ box-shadow: 0 0 .1rem .2rem #ff043ab6;
+ }
+ 
+ .boton {
+     background-color: #000;
+     font-size: 1.4em ;
+     letter-spacing: 2px; 
+     padding: 5px 15px ;
+     border-radius: 20px;
+     box-shadow: rgb(41, 41, 41) 1px 3px 3px ;
+     transition: all .3s
+     
+ }
+ 
+ .boton:hover {
+     background-color: #4b0111;
+     box-shadow:  rgb(41, 41, 41) 2px 5px 5px ;
+ }
+ 
+ 
+ 
+
+
+
+
+.infoCitio , .infoNumero, .infoArroba{
+    color: #c7c7c7;
+    line-height: 5;
+}
+
+.infoCitio h5{
+    font-size: 1em;
+    line-height: .9;
+}
+
+.infoNumero h5{
+    font-size: 1.5em;
+    line-height: .9;
+
+}
+
+.infoArroba h5{
+    font-size: 1em;
+    line-height: .9    
+}
+
+
+
+.pie{
+    background: #000
+}
+
