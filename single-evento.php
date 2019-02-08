@@ -47,7 +47,7 @@ while(have_posts()) {
             <!-- <h4>Información extra</h4> -->
           </div>
           <div class="event-body-article-text">
-            <?php echo get_the_content(); ?>
+            <?php the_content(); ?>
           </div>
           <div class=" event-body-article-redes">
             <div class="redS">
