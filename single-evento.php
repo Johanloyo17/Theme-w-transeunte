@@ -43,7 +43,7 @@ while(have_posts()) {
       <div class="event-body">
         <div class="event-body-article">
           <div class="event-body-article-head">
-            <h1><?php echo get_the_title(); ?></h1>
+            <?php get_the_title(); ?>
             <!-- <h4>Información extra</h4> -->
           </div>
           <div class="event-body-article-text">

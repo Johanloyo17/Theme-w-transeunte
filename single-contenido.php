@@ -15,35 +15,12 @@ while(have_posts()) {
             <li class="breadcrumb-item"><a href="<?php echo site_url(); ?>">Inicio</a></li>
             <li class="breadcrumb-item active" aria-current="page"><?php echo get_the_title() ?></li>
           </ol>
-          <div class="dropdown d-md-none d-bock">
-            <button
-              class="btn btn-secondary dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Más eventos
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">La Mezcolanza</a>
-              <a class="dropdown-item" href="#">El cruzado criollo</a>
-              <a class="dropdown-item" href="#">Te tengo un cuento</a>
-              <a class="dropdown-item" href="#">La calle habla</a>
-              <a class="dropdown-item" href="#">Barrio venezolano</a>
-              <a class="dropdown-item" href="#">Miscelánea</a>
-              <a class="dropdown-item" href="#">Échanos tu cuento</a>
-              <a class="dropdown-item" href="#">Sexontológico en Madrid</a>
-              <a class="dropdown-item" href="#">[a love supreme]</a>
-            </div>
-          </div>
         </nav>
       </div>
       <div class="event-body">
         <div class="event-body-article">
           <div class="event-body-article-head">
-            <h1><?php echo get_the_title(); ?></h1>
+            <?php the_title(); ?>
             <!-- <h4>Información extra</h4> -->
           </div>
           <div class="event-body-article-text">

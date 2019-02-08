@@ -148,9 +148,17 @@
               <h2 class="evento-content-text-title"><?php echo get_the_title(); ?></h2>
               <p class="evento-content-text-p"> <?php echo get_the_excerpt(); ?> </p>
               <p class="evento-content-text-info">
-                <span>Valencia - Venezuela</span> <span>Abril 2016</span>
-                <span>Evento multi artístico</span> <span>Espacios cerrados y abiertos</span>
-                <span>Asistentes: +150</span>
+              <?php if(get_post_type() === 'evento') { ?>
+                <span><?= get_field('lugar') ?></span>
+                <span><?= get_field('fecha') ?></span>
+                <span><?= get_field('tipo_de_evento') ?></span>
+                <span><?= get_field('tipo_de_espacio') ?></span>
+                <span>Asistentes: <?= get_field('numero_de_asistentes') ?>+</span>
+              <?php } ?>
+              <?php if(get_post_type() === 'contenido') { ?>
+                <span><?= get_field('plataforma_o_red_social') ?></span>
+                <span>Alcance: <?= get_field('alcance') ?></span>
+              <?php } ?>
               </p>
               <a class="evento-content-text-link btn btn-dark w-100 font-italic " href="<?php echo get_permalink(); ?>">
                 Mirar evento
