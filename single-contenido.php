@@ -20,11 +20,11 @@ while(have_posts()) {
       <div class="event-body">
         <div class="event-body-article">
           <div class="event-body-article-head">
-            <?php the_title(); ?>
+            <?php echo get_the_title(); ?>
             <!-- <h4>Información extra</h4> -->
           </div>
           <div class="event-body-article-text">
-            <?php the_content(); ?>
+            <?php echo get_the_content(); ?>
           </div>
           <div class=" event-body-article-redes">
             <div class="redS">
