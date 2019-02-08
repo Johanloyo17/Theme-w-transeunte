@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php
+get_header();
+while(have_posts()) { the_post(); 
+?>
     <!-- MENU ADENTRO -->
     <section id="menuAdentro" class="seccion bg-dark ">
       <!-- ECABEZADO LOGO Y BOTON MENU -->
@@ -76,47 +79,17 @@
       <div class="manifiesto-img"></div>
       <div class="manifiesto-texto font-italic">
         <div class="manifiesto-cont-p">
-          <p>
-            Somos un movimiento creativo, identificado con la calle y el monte. Nuestros pies son
-            motores que nos trasladan hacia escenarios conocidos y otros tantos por descubrir. Las
-            rutas recorridas nos aburren, nos vuelven somnolientos. La única manera viable para
-            permanecer de pie es siguiendo el ritmo de las ideas.
-          </p>
-          <p>
-            En la calle de las opiniones transitamos sin cesar. Somos forasteros de la nada. Por eso
-            decimos: somos transeúntes que aspiran participar en una orgía cultural para interactuar
-            con la mal llamada minoría. Una comunidad inquieta e incesante, a quienes la búsqueda de
-            una identidad propia nos resulta plausible.
-          </p>
-
-          <p>
-            También una comunidad con un medio de expresión que no pretende enviar un mensaje
-            imparcial; tampoco siente atracción por el centro y menos hacia la objetividad. Sólo
-            busca involucrar a quienes forman parte del todo. Esa es la creencia: unir nuestra voz
-            con otras que canten en el mismo idioma, el del amor por conocer el todo y la nada. La
-            causa no es una bandera sino la razón.
-          </p>
-
-          <p>
-            Somos testigos de que el mundo se derrumba. El tiempo corre y el conflicto se libera sin
-            pudor cantando el himno de la civilización. En ocasiones, dudamos que sea posible vencer
-            esa maquinaria. Sí, lo admitimos, pero es parte del hecho. Andamos vagantes y una de
-            nuestras certezas es que aprendemos caminando. Así que mientras más espacios haya por
-            recorrer, más sabremos.
-          </p>
-          <p>
-            Cualquier lugar es nuestra casa. Merendamos, bailamos, conversamos y pensamos dentro de
-            ella. Después de entrar por la puerta seguimos siendo unos transeúntes que buscan su
-            espacio en un rincón apartado. Somos una comunidad sin techo, pero con muchas ganas de
-            crear y, sobre todo, apreciar otras creaciones.
-          </p>
+          <?php
+          the_content(); // Manifiesto dinámico!
+          }
+          ?>
         </div>
       </div>
       <div class="manifiesto-footer">
         <div class="manifiesto-footer-redes">
           <a href="https://www.instagram.com/transeuntehabla/"> <i class="fab fa-instagram"></i> </a>
-          <a href="https://www.facebook.com/somostranseunte/"> <i class="fab fa-facebook-f"></i> </a>
-          <a href="#"> <i class="fab fa-linkedin-in"></i> </a>
+          <a href="https://www.facebook.com/transeuntehabla/"> <i class="fab fa-facebook-f"></i> </a>
+          <a href="https://www.linkedin.com/company/transeuntehabla/"> <i class="fab fa-linkedin-in"></i> </a>
         </div>
         <div class="manifiesto-footer-redes">
           <a href="<?php echo wp_get_attachment_url(7) ?>"> <i class="fa fa-download" aria-hidden="true"></i> </a>
@@ -161,7 +134,7 @@
               <?php } ?>
               </p>
               <a class="evento-content-text-link btn btn-dark w-100 font-italic " href="<?php echo get_permalink(); ?>">
-                Mirar evento
+                Ver evento
               </a>
             </div>
           </div>

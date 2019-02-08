@@ -51,11 +51,11 @@ while(have_posts()) {
           </div>
           <div class=" event-body-article-redes">
             <div class="redS">
-              <a target="_blank" href="https://www.facebook.com/somostranseunte/"> <img src="<?php echo get_theme_file_uri('images/icon/Redes Sociales F.png'); ?>" alt="" /> </a>
+              <a target="_blank" href="https://www.facebook.com/transeuntehabla/"> <img src="<?php echo get_theme_file_uri('images/icon/Redes Sociales F.png'); ?>" alt="" /> </a>
             </div>
 
             <div class="redS">
-              <a target="_blank" href=""> <img src="<?php echo get_theme_file_uri('images/icon/Redes Sociales in.png'); ?>" alt="" /> </a>
+              <a target="_blank" href="https://www.linkedin.com/company/transeuntehabla/"> <img src="<?php echo get_theme_file_uri('images/icon/Redes Sociales in.png'); ?>" alt="" /> </a>
             </div>
 
             <div class="redS">
@@ -133,20 +133,6 @@ while(have_posts()) {
                 <a href=""> <span>El Estimulo </span> </a>
               </div>
             </div>
-          </div>
-          <div class="notasPrensa">
-            <a href="">
-              <div class="notasPrensa-nota1">
-                <div class="notaTitle">Nota de prensa.</div>
-                <div class="nota-content">LETRIANA</div>
-              </div>
-            </a>
-            <a href="">
-              <div class="notasPrensa-nota2">
-                <div class="notaTitle">Nota de prensa.</div>
-                <div class="nota-content">NOTITARDE</div>
-              </div>
-            </a>
           </div>
         </div>
       </div>
