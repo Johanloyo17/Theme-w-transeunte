@@ -272,7 +272,13 @@ while(have_posts()) { the_post();
       </div>
       <div class="footPage-form">
         <div class="Formularios mx-auto  ">
-        <?php echo do_shortcode(get_field('formulario')); ?>
+        <?php 
+        if (get_field('formulario')):
+          echo get_field('formulario');
+        else:
+          echo do_shortcode('[contact-form-7 id="473" title="Learn More Form"]');
+        endif;
+        ?>
           <form class=" container-fluid font-italic">
             <div class=" form-row align-items-center ">
               <div class="col-md-4 col-12 my-3">
