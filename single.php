@@ -115,7 +115,7 @@ while(have_posts()) {
               } // endwhile
               wp_reset_postdata();
               ?>
-              <?php if($i === 4) { ?>
+              <?php if($i > 3) { ?>
               <span class="show-boton">Ver más</span>
               <?php } ?>
             </div>
