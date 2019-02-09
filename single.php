@@ -108,14 +108,14 @@ while(have_posts()) {
               <div class="lateralbody-evento">
                 <a href="<?php echo get_permalink() ?>"> <span><?php echo get_the_title() ?></span> </a>
               </div>
-              <?php if ($i === 7) { ?>
+              <?php if ($morePosts->count > 0 && $i === $morePosts->count - 1) { ?>
               </div>
               <?php } // endif 
               $i++; // increment 
               } // endwhile
               wp_reset_postdata();
               ?>
-              <?php if($i > 3) { ?>
+              <?php if($i === 4) { ?>
               <span class="show-boton">Ver más</span>
               <?php } ?>
             </div>
@@ -133,20 +133,6 @@ while(have_posts()) {
                 <a href=""> <span>El Estimulo </span> </a>
               </div>
             </div>
-          </div>
-          <div class="notasPrensa">
-            <a href="">
-              <div class="notasPrensa-nota1">
-                <div class="notaTitle">Nota de prensa.</div>
-                <div class="nota-content">LETRIANA</div>
-              </div>
-            </a>
-            <a href="">
-              <div class="notasPrensa-nota2">
-                <div class="notaTitle">Nota de prensa.</div>
-                <div class="nota-content">NOTITARDE</div>
-              </div>
-            </a>
           </div>
         </div>
       </div>
