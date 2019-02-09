@@ -64,8 +64,8 @@ while(have_posts()) {
           </div>
         </div>
         <?php
-        $images = acf_photo_gallery('galeria', get_the_ID());
-        if (count($images)) {
+        $images = get_field('galeria');
+        if ($images) {
         ?>
         <div class="event-body-galery bg-dark">
           <div class="event-body-galery-header d-flex">
@@ -74,7 +74,7 @@ while(have_posts()) {
           <div class="event-body-galery-fotos">
           <?php
           foreach($images as $image) {
-            $full_image_url= $image['full_image_url'];
+            $full_image_url= $image['sizes']['large'];
             $title = $image['title']; 
           ?>
             <div class="event-body-galery-fotos-img">
@@ -93,13 +93,14 @@ while(have_posts()) {
             </div>
             <div class="lateralbody">
               <?php
-              $moreEvents = new WP_Query(array(
+              $morePosts = new WP_Query(array(
+                'post_type' => get_post_type(),
                 'posts_per_page' => 8,
                 'post__not_in' => array(get_the_ID())
               ));
               $i = 0;
-              while($moreEvents->have_posts()) { 
-                $moreEvents->the_post();
+              while($morePosts->have_posts()) { 
+                $morePosts->the_post();
               ?>
               <?php if ($i === 4) { ?>
                 <div class="colapsable">
@@ -114,7 +115,7 @@ while(have_posts()) {
               } // endwhile
               wp_reset_postdata();
               ?>
-              <?php if($moreEvents->count > 4) { ?>
+              <?php if($i > 3) { ?>
               <span class="show-boton">Ver más</span>
               <?php } ?>
             </div>
