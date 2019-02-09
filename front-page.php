@@ -81,7 +81,7 @@ while(have_posts()) { the_post();
         <div class="manifiesto-cont-p">
           <?php
           the_content(); // Manifiesto dinámico!
-          }
+          
           ?>
         </div>
       </div>
@@ -260,18 +260,19 @@ while(have_posts()) { the_post();
         <div class=" footPage-contact-city "><h5>Madrid (España) / Valencia (Venezuela)</h5></div>
         <div class="socialF d-flex ">
           <div class="redS  mx-2">
-            <a href=""> <img src="<?php echo get_theme_file_uri('images/icon/Redes Sociales F.png') ?>" alt="" /> </a>
+            <a href="https://www.facebook.com/transeuntehabla/"> <img src="<?php echo get_theme_file_uri('images/icon/Redes Sociales F.png') ?>" alt="" /> </a>
           </div>
           <div class="redS  mx-2">
-            <a href=""> <img src="<?php echo get_theme_file_uri('images/icon/Redes Sociales in.png') ?>" alt="" /> </a>
+            <a href="https://www.linkedin.com/company/transeuntehabla/"> <img src="<?php echo get_theme_file_uri('images/icon/Redes Sociales in.png') ?>" alt="" /> </a>
           </div>
           <div class="redS  mx-2">
-            <a href=""> <img src="<?php echo get_theme_file_uri('images/icon/Redes Sociales I.png') ?>" alt="" /> </a>
+            <a href="https://www.instagram.com/transeuntehabla/"> <img src="<?php echo get_theme_file_uri('images/icon/Redes Sociales I.png') ?>" alt="" /> </a>
           </div>
         </div>
       </div>
       <div class="footPage-form">
         <div class="Formularios mx-auto  ">
+        <?php echo get_field('formulario'); ?>
           <form class=" container-fluid font-italic">
             <div class=" form-row align-items-center ">
               <div class="col-md-4 col-12 my-3">
@@ -314,4 +315,4 @@ while(have_posts()) { the_post();
         </div>
       </div>
     </footer>
-<?php get_footer(); ?>
+<?php } get_footer(); ?>
