@@ -105,11 +105,11 @@ while(have_posts()) {
               <?php if ($i === 4) { ?>
                 <div class="colapsable">
               <?php } ?>
-              <div class="lateralbody-evento">
-                <a href="<?php echo get_permalink() ?>"> <span><?php echo get_the_title() ?></span> </a>
-              </div>
-              <?php if ($morePosts->count > 0 && $i === $morePosts->count - 1) { ?>
-              </div>
+                  <div class="lateralbody-evento">
+                    <a href="<?php echo get_permalink() ?>"> <span><?php echo get_the_title() ?></span> </a>
+                  </div>
+              <?php if ($morePosts->post_count > 0 && $i === $morePosts->post_count - 1) { ?>
+                </div>
               <?php } // endif 
               $i++; // increment 
               } // endwhile
