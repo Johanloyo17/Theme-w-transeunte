@@ -273,39 +273,8 @@ while(have_posts()) { the_post();
       <div class="footPage-form">
         <div class="Formularios mx-auto  ">
         <?php 
-        if (get_field('formulario')):
           echo do_shortcode(get_field('formulario'));
-        else:
-          echo do_shortcode('[contact-form-7 id="473" title="Learn More Form"]');
-        endif;
         ?>
-          <form class=" container-fluid font-italic">
-            <div class=" form-row align-items-center ">
-              <div class="col-md-4 col-12 my-3">
-                <div class="text-md-left ml-2 text-center">
-                  <label class=" labelForm text-center " for="FormNombre">Nombre:</label>
-                </div>
-                <input type="text" class="form-control formulario " id="FormNombre" />
-              </div>
-              <div class="col-md-7 col-12 offset-md-1 my-3">
-                <div class="text-md-left ml-2 text-center">
-                  <label class="labelForm " for="FormCorreo">Correo:</label>
-                </div>
-                <div class="input-group ">
-                  <input type="text" class="form-control  formulario" id="FormCorreo" />
-                </div>
-              </div>
-              <div class="form-group col-12">
-                <div class="text-md-left ml-2 text-center">
-                  <label class="labelForm" for="texArea">Mensaje:</label>
-                </div>
-                <textarea class="form-control  formulario" id="texArea" rows="3"></textarea>
-              </div>
-            </div>
-            <div class="boton-enviar d-flex  mx-auto">
-              <button type="button" class="btn btn-dark mx-auto boton">Enviar</button>
-            </div>
-          </form>
         </div>
       </div>
     </div>
