@@ -120,20 +120,25 @@ while(have_posts()) {
               <?php } ?>
             </div>
           </div>
+          <?php
+          if(have_rows('notas_de_prensa') ) {
+          ?>
           <div class="event-lateral-prensa">
             <div class="lateralHeader"><span class="porIcon">***</span> <span>Prensa</span></div>
             <div class="lateralbody">
+          <?php
+            while(have_rows('notas_de_prensa')) { the_row();
+              $title = get_sub_field('nombre');
+              $url = get_sub_field('link');
+          ?>
               <div class="lateralbody-evento">
-                <a href=""> <span>Carabobeño</span> </a>
+                <a href="<?php echo $url ?>"> <span><? echo $title ?></span> </a>
               </div>
-              <div class="lateralbody-evento">
-                <a href=""> <span>El Nacional</span> </a>
-              </div>
-              <div class="lateralbody-evento">
-                <a href=""> <span>El Estimulo </span> </a>
-              </div>
-            </div>
-          </div>
+          <?php
+            }
+          echo '</div>' . "\n" . '</div>';
+          }
+          ?>
         </div>
       </div>
     </section>
