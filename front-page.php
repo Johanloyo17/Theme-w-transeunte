@@ -219,7 +219,7 @@ while(have_posts()) { the_post();
       </div>
       <div class="contenidos-queHacemos font-italic ">
         <div class="contenidos-queHacemos-title container-fluid mt-0  bg.bg-dark text-light">
-          ¿QUÉ HACEMOS?
+          ¿QUÉ HACEMOS?<?php echo get_the_title()?>
         </div>
         <div class="contenidos-queHacemos-text wow slideInUp">
           <img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="" /> <span>Creación de campañas</span>
@@ -272,7 +272,7 @@ while(have_posts()) { the_post();
       </div>
       <div class="footPage-form">
         <div class="Formularios mx-auto  ">
-        <?php echo get_field('formulario'); ?>
+        <?php the_field('formulario'); ?>
           <form class=" container-fluid font-italic">
             <div class=" form-row align-items-center ">
               <div class="col-md-4 col-12 my-3">
