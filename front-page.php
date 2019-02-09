@@ -272,7 +272,7 @@ while(have_posts()) { the_post();
       </div>
       <div class="footPage-form">
         <div class="Formularios mx-auto  ">
-        <?php the_field('formulario'); ?>
+        <?php echo do_shortcode(get_field('formulario')); ?>
           <form class=" container-fluid font-italic">
             <div class=" form-row align-items-center ">
               <div class="col-md-4 col-12 my-3">
