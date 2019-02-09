@@ -89,7 +89,7 @@ while(have_posts()) {
         <div class="event-lateral mr-lg-4 mr-2">
           <div class="event-lateral-masEventos">
             <div class="lateralHeader">
-              <span class="porIcon">***</span> <span>Más eventos</span>
+              <span class="porIcon">***</span> <span><?php echo 'Mas ' . get_post_type() . 's' ?></span>
             </div>
             <div class="lateralbody">
               <?php
@@ -133,6 +133,20 @@ while(have_posts()) {
                 <a href=""> <span>El Estimulo </span> </a>
               </div>
             </div>
+          </div>
+          <div class="notasPrensa">
+            <a href="">
+              <div class="notasPrensa-nota1">
+                <div class="notaTitle">Nota de prensa.</div>
+                <div class="nota-content">LETRIANA</div>
+              </div>
+            </a>
+            <a href="">
+              <div class="notasPrensa-nota2">
+                <div class="notaTitle">Nota de prensa.</div>
+                <div class="nota-content">NOTITARDE</div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
