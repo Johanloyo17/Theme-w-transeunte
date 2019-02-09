@@ -274,7 +274,7 @@ while(have_posts()) { the_post();
         <div class="Formularios mx-auto  ">
         <?php 
         if (get_field('formulario')):
-          echo get_field('formulario');
+          echo do_shortcode(get_field('formulario'));
         else:
           echo do_shortcode('[contact-form-7 id="473" title="Learn More Form"]');
         endif;
