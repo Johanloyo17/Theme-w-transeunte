@@ -77,11 +77,10 @@ while(have_posts()) { the_post();
         <img src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>" alt="Sombra" class="sombra " />
       </div>
       <div class="manifiesto-img"></div>
-      <div class="manifiesto-texto font-italic">
+      <div class="bgRayas manifiesto-texto font-italic">
         <div class="manifiesto-cont-p">
           <?php
           the_content(); // Manifiesto dinámico!
-          
           ?>
         </div>
       </div>
@@ -141,6 +140,32 @@ while(have_posts()) { the_post();
         </div>
         <?php } wp_reset_postdata(); ?>
       </div>
+      <!-- Eventos responsive -->
+      <div class="orgiaCultural-eventosMovil">
+      <?php
+        $homepagePosts = new WP_Query(array(
+          'post_type' => array('evento', 'contenido'),
+          'orderby' => 'date',
+        ));
+        $i = 0;
+        while($homepagePosts->have_posts()) {
+          $homepagePosts->the_post();
+          if($i === 4) { ?>
+          <div class="colapsable orgiaCultural-eventosMovil-C">
+      <?php } ?>
+        <div class="eventoMovil">
+          <a class="wow rotateInDownLeft  " href="<?php echo get_permalink(); ?>"
+            ><span class="eventoMovil-subTitle"><?php echo get_the_title(); ?></span></a
+          >
+          <!-- <span class="eventoMovil-subTitle">Valencia - Venezuela</span> -->
+        </div>
+      <?php if($i === $homepagePosts->post_count - 1) { ?>
+        </div>
+        <div class="show-boton moreEvents">
+          <span style="color: #fff !important">VER MÁS</span>
+        </div>
+      <?php } ?>
+      </div>
     </section>
     <!-- FIN seccion orgia cultural -->
     <!-- seccion caminemos y proyectos, que hacemos? -->
@@ -150,9 +175,8 @@ while(have_posts()) { the_post();
         <img src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>" alt="Sombra" class="sombra " />
         <div>
           <p>
-            En nuestro manifiesto aseguramos que cualquier lugar es nuestra casa. <br />
-            Esto se debe a que andamos de paso por una razón: ayudarte a encontrar tu camino. <br />
-            <span> Si abres la puerta posiblemente te costará decirnos adiós. </span>
+          Cualquier lugar es nuestra casa. <br />
+            Si abres la puerta posiblemente te costará decirnos adiós.
           </p>
         </div>
         <img src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>" alt="Sombra" class="sombra " />
@@ -160,9 +184,6 @@ while(have_posts()) { the_post();
       <div class="proyectos">
         <div class="proyectos-img"></div>
         <div class="proyectos-proyectos">
-          <div class="header w-100 d-flex justify-content-center align-items-center">
-            <span>¿QUÉ HACEMOS?</span>
-          </div>
           <div class="cuerpo-proyecto font-italic">
             <div class="proyectos-contenido  row">
               <div class="proyecto-titulo ">Literatura</div>
@@ -218,9 +239,6 @@ while(have_posts()) { the_post();
         <img src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>" alt="Sombra" class="sombra " />
       </div>
       <div class="contenidos-queHacemos font-italic ">
-        <div class="contenidos-queHacemos-title container-fluid mt-0  bg.bg-dark text-light">
-          ¿QUÉ HACEMOS?<?php echo get_the_title()?>
-        </div>
         <div class="contenidos-queHacemos-text wow slideInUp">
           <img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="" /> <span>Creación de campañas</span>
         </div>
