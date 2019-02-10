@@ -162,7 +162,7 @@ while(have_posts()) { the_post();
       <?php 
           $i++;
         } ?>
-      <?php if($homepagePosts->post_count > 0 && $i === $homepagePosts->post_count - 1) { ?>
+      <?php if($homepagePosts->post_count > 0 && $i === $homepagePosts->post_count) { ?>
         </div>
         <div class="show-boton moreEvents">
           <span style="color: #fff !important">VER MÁS</span>
