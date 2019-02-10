@@ -159,13 +159,15 @@ while(have_posts()) { the_post();
           >
           <!-- <span class="eventoMovil-subTitle">Valencia - Venezuela</span> -->
         </div>
+      <?php 
+          $i++;
+        } wp_reset_postdata(); ?>
       <?php if($i === $homepagePosts->post_count - 1) { ?>
         </div>
         <div class="show-boton moreEvents">
           <span style="color: #fff !important">VER MÁS</span>
         </div>
       <?php }
-        }
       ?>
       </div>
     </section>
