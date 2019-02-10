@@ -161,13 +161,13 @@ while(have_posts()) { the_post();
         </div>
       <?php 
           $i++;
-        } wp_reset_postdata(); ?>
-      <?php if($i === $homepagePosts->post_count - 1) { ?>
+        } ?>
+      <?php if($homepagePosts->post_count > 0 && $i === $homepagePosts->post_count - 1) { ?>
         </div>
         <div class="show-boton moreEvents">
           <span style="color: #fff !important">VER MÁS</span>
         </div>
-      <?php }
+      <?php } wp_reset_postdata();
       ?>
       </div>
     </section>
