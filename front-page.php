@@ -164,7 +164,9 @@ while(have_posts()) { the_post();
         <div class="show-boton moreEvents">
           <span style="color: #fff !important">VER MÁS</span>
         </div>
-      <?php } ?>
+      <?php }
+        }
+      ?>
       </div>
     </section>
     <!-- FIN seccion orgia cultural -->
