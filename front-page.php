@@ -91,7 +91,7 @@ while(have_posts()) { the_post();
           <a href="https://www.linkedin.com/company/transeuntehabla/"> <i class="fab fa-linkedin-in"></i> </a>
         </div>
         <div class="manifiesto-footer-redes">
-          <a href="<?php echo wp_get_attachment_url(7) ?>"> <i class="fa fa-download" aria-hidden="true"></i> </a>
+          <a href="https://transeuntehabla.com/public/Manifiesto.pdf"> <i class="fa fa-download" aria-hidden="true"></i> </a>
         </div>
       </div>
     </section>
