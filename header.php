@@ -9,5 +9,5 @@
     <meta name="keywords" content="culture, periodism, people, photography, design">
     <!--fin de meta seo-->
     <?php wp_head(); ?>
-  <head>
+  </head>
   <body <?php body_class(); ?>>
