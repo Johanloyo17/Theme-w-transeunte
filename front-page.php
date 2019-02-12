@@ -3,18 +3,18 @@ get_header();
 while(have_posts()) { the_post(); 
 ?>
     <!-- MENU ADENTRO -->
-    <section id="menuAdentro" class="seccion bg-dark ">
+    <section id="menuAdentro" class="bg-dark">
       <!-- ECABEZADO LOGO Y BOTON MENU -->
       <header class="encabezadoMenu row d-flex container-fluid align-items-center align-content-center ">
         <div class="mascaraMenu2"></div>
-          <div class="logoMenu ml-3">
-          <a href="<?php echo site_url(); ?>">
-              <img  class="" src="<?php echo get_theme_file_uri('/images/icon/Transeunte-04.png')?>" alt="Transeunte Logo">
-          </a>
-          </div>
-          <div class=" botonMenu  ml-auto mr-3 mr-sm-1 d-flex align-items-center justify-content-center ">
-            <i class="fa fa-bars " aria-hidden="true"></i>
-          </div>
+        <div class="logoMenu ml-3">
+        <a href="<?php echo site_url(); ?>">
+            <img src="<?php echo get_theme_file_uri('/images/icon/Transeunte-04.png')?>" alt="Transeunte Logo">
+        </a>
+        </div>
+        <div class=" botonMenu  ml-auto mr-3 mr-sm-1 d-flex align-items-center justify-content-center ">
+          <i class="fa fa-bars " aria-hidden="true"></i>
+        </div>
       </header>
       <div class="  cont-tituloMenu d-flex justify-content-sm-center  align-items-center mx-auto ">
         <div class="copysPortada text-lg-right text-center font-italic mx-auto">
@@ -62,12 +62,6 @@ while(have_posts()) { the_post();
       </div>
     </nav>
     <!-- FIN MENU AFUERA -->
-    <!-- divisor no se para que coño esta aqui  
-    <div class="divisor d-flex align-items-center">
-        <img src="icon/Separador.png" alt="Sombra" class="sombra ">
-    </div>
-    -->
-
     <!-- iniciode la infografia -->
     <!-- Manifiesto -->
     <section id="manifiesto" class="manifiesto ">
@@ -196,32 +190,25 @@ while(have_posts()) { the_post();
                 <span> Presentaciones de libros, talleres y conversatorios </span>
               </div>
             </div>
-            <div class="proyectos-contenido  ">
-              <div class="proyectos-contenido ">
-                <div class="proyecto-titulo">Música</div>
-                <div class="proyecto-separador"><img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="" /></div>
-                <div class="proyecto-descripcion">
-                  <span> Mini conciertos acústicos y clínicas musicales </span>
-                </div>
+            <div class="proyectos-contenido ">
+              <div class="proyecto-titulo">Música</div>
+              <div class="proyecto-separador"><img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="" /></div>
+              <div class="proyecto-descripcion">
+                <span> Mini conciertos acústicos y clínicas musicales </span>
               </div>
             </div>
-            <div class="proyectos-contenido ">
-              <div class="proyectos-contenido">
-                <div class="proyecto-titulo">Cine y fotografía</div>
-                <div class="proyecto-separador"><img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="" /></div>
-                <div class="proyecto-descripcion">
-                  <span> Cine foros, talleres, exposiciones y recorridos fotográficos. </span>
-                </div>
+            <div class="proyectos-contenido">
+              <div class="proyecto-titulo">Cine y fotografía</div>
+              <div class="proyecto-separador"><img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="" /></div>
+              <div class="proyecto-descripcion">
+                <span> Cine foros, talleres, exposiciones y recorridos fotográficos. </span>
               </div>
             </div>
-
-            <div class="proyectos-contenido ">
-              <div class="proyectos-contenido">
-                <div class="proyecto-titulo">Artes plásticas</div>
-                <div class="proyecto-separador"><img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="" /></div>
-                <div class="proyecto-descripcion">
-                  <span> Exposiciones, shows de arte en vivo y talleres. </span>
-                </div>
+            <div class="proyectos-contenido">
+              <div class="proyecto-titulo">Artes plásticas</div>
+              <div class="proyecto-separador"><img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="" /></div>
+              <div class="proyecto-descripcion">
+                <span> Exposiciones, shows de arte en vivo y talleres. </span>
               </div>
             </div>
           </div>
@@ -244,23 +231,35 @@ while(have_posts()) { the_post();
       </div>
       <div class="contenidos-queHacemos font-italic ">
         <div class="contenidos-queHacemos-text wow slideInUp">
-          <img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="" /> <span>Creación de campañas</span>
+          <img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="" />
+          <span>Creación de campañas</span>
+          <div class="lineaContenidos"></div>
         </div>
+        <img src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>" alt="Sombra" class="sombra " />
         <div class="contenidos-queHacemos-text wow  slideInUp ">
-          <img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="" /> <span>Creación de personajes</span>
+          <img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="" />
+          <span>Creación de personajes</span>
+          <div class="lineaContenidos"></div>
         </div>
+        <img src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>" alt="Sombra" class="sombra " />
         <div class="contenidos-queHacemos-text wow  slideInUp ">
           <img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="" />
           <span>Redacción y diseño gráfico de publicaciones para redes sociales.</span>
+          <div class="lineaContenidos"></div>
         </div>
+        <img src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>" alt="Sombra" class="sombra " />
         <div class="contenidos-queHacemos-text wow  slideInUp ">
           <img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="" />
           <span>Redacción y diseño gráfico de blogs, email marketing y sitios web.</span>
+          <div class="lineaContenidos"></div>
         </div>
+        <img src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>" alt="Sombra" class="sombra " />
         <div class="contenidos-queHacemos-text wow  slideInUp ">
           <img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="" />
           <span> Redacción y edición de contenido para vídeos</span>
+          <div class="lineaContenidos"></div>
         </div>
+        <img src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>" alt="Sombra" class="sombra " />
       </div>
     </section>
     <!--  FIN contenidos y ¡Que hacemos? -->
