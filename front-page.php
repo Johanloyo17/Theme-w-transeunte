@@ -266,7 +266,7 @@ while(have_posts()) { the_post();
     <!--  FIN contenidos y ¡Que hacemos? -->
     <!--camina con nosotros -->
     <div class="ConNosotros-img"></div>
-    <div id="contacto" class="footPage">
+    <div id="contacto" class="bgRayas footPage">
       <div class="footPage-text">
         <p class="footPage-text-p">
           <span> "Queremos unirnos </span> <span> con otros que andan </span>
@@ -304,7 +304,6 @@ while(have_posts()) { the_post();
       <div class="pieDos container-fluid d-flex align-self-end justify-content-center ">
         <div class="textF text-center align-self-center d-flex flex-column py-2">
           <h4>FOTOGRAFÍAS:</h4>
-          <span>Ivannel Romero / ivannelromero@gmail.com</span>
           <span class="">Kala Madriz / kalamadriz@gmail.com</span>
           <span
             >Transeúnte &copy; <? echo date(Y);?></span
