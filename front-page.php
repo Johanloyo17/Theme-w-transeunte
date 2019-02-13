@@ -300,6 +300,12 @@ while(have_posts()) { the_post();
         <?php 
           echo do_shortcode(get_field('formulario'));
         ?>
+          <!-- <div class="botonAlert botonAlert-succ alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Mensaje enviado con éxito</strong> 
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div> -->
         </div>
       </div>
     </div>
