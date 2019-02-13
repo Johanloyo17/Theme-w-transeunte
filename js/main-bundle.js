@@ -61,6 +61,10 @@ $(document).ready(function () {
     $(element).click(() => $(element).find('.evento-content').slideToggle("slow"));
   });
 });
+
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+  $('.wpcf7-response-output').addClass('botonAlert botonAlert-succ alert alert-success alert-dismissible fade show');
+}, false );
 /*
  Copyright (C) Federico Zivolo 2018
  Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
