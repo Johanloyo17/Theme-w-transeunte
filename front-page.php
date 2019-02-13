@@ -5,14 +5,18 @@ while(have_posts()) { the_post();
     <!-- MENU ADENTRO -->
     <section id="menuAdentro" class="bg-dark">
       <!-- ECABEZADO LOGO Y BOTON MENU -->
-      <header class="encabezadoMenu row d-flex container-fluid align-items-center align-content-center ">
+      <header
+        class="encabezadoMenu row d-flex container-fluid align-items-center align-content-center "
+      >
         <div class="mascaraMenu2"></div>
         <div class="logoMenu ml-3">
-        <a href="<?php echo site_url(); ?>">
-            <img src="<?php echo get_theme_file_uri('/images/icon/Transeunte-04.png')?>" alt="Transeunte Logo">
-        </a>
+          <a href="<?php echo site_url(); ?>">
+              <img src="<?php echo get_theme_file_uri('/images/icon/Transeunte-04.png')?>" alt="Transeunte Logo">
+          </a>
         </div>
-        <div class=" botonMenu  ml-auto mr-3 mr-sm-1 d-flex align-items-center justify-content-center ">
+        <div
+          class=" botonMenu  ml-auto mr-3 mr-sm-1 d-flex align-items-center justify-content-center "
+        >
           <i class="fa fa-bars " aria-hidden="true"></i>
         </div>
       </header>
@@ -22,9 +26,9 @@ while(have_posts()) { the_post();
           <h3 class="subtitulo  mt-3  ml-lg-4 font-italic ">
             ¡Todo un viaje por la ciudad de experiencias interminables!
           </h3>
-          <h4 subtitulo> AGENCIA DE CONTENIDOS CULTURALES</h4>
+          <h4 subtitulo>AGENCIA DE CONTENIDOS CULTURALES</h4>
           <div class="lineaT">
-              <img src="<?php echo get_theme_file_uri('/images/icon/Linea2-01.png') ?>" alt="linea">
+            <img src="<?php echo get_theme_file_uri('/images/icon/Linea2-01.png') ?>" alt="linea">
           </div>
         </div>
       </div>
