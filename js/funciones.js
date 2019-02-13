@@ -54,3 +54,12 @@ $(document).ready(function () {
 document.addEventListener( 'wpcf7mailsent', function( event ) {
   $('.wpcf7-response-output').addClass('botonAlert botonAlert-succ alert alert-success alert-dismissible fade show');
 }, false );
+document.addEventListener( 'wpcf7spam', function( event ) {
+  $('.wpcf7-response-output').addClass('botonAlert botonAlert-succ alert alert-warning alert-dismissible fade show');
+}, false );
+document.addEventListener( 'wpcf7mailfailed', function( event ) {
+  $('.wpcf7-response-output').addClass('botonAlert botonAlert-succ alert alert-warning alert-dismissible fade show');
+}, false );
+document.addEventListener( 'wpcf7invalid', function( event ) {
+  $('.wpcf7-response-output').addClass('botonAlert botonAlert-succ alert alert-danger alert-dismissible fade show');
+}, false );
