@@ -27,7 +27,7 @@ gulp.task('minify-css', function(done) {
       themeLocation + 'css/animate.min.css'
     ])
     .pipe(concat('main-bundle.css'))
-    .pipe(cleanCSS())
+    // .pipe(cleanCSS())
     .pipe(gulp.dest(themeLocation + 'css/'));
   done();
 });
