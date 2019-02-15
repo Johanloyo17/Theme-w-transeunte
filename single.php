@@ -78,7 +78,7 @@ while(have_posts()) {
             $title = $image['title']; 
           ?>
             <div class="event-body-galery-fotos-img">
-              <img style="width: 100%; height: 100%; object-fit: cover" src="<?php echo $full_image_url; ?>" alt="<?php echo $title; ?>" >
+              <img style="width: 100%; height: 100%;" src="<?php echo $full_image_url; ?>" alt="<?php echo $title; ?>" >
             </div>
           <?php } ?>
           </div>
