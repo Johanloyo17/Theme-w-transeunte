@@ -5,15 +5,28 @@
 
 
 
-
+.redSa{
+    background: #7d7d7d !important;
+    border-radius: 50%;
+}  
 ///////////variables////////
      $rojo-linea: rgb(255, 4, 58);       
 	 $rojo-t:#b22222;
      $grey:rgb(238, 238, 238);
 	 $c-back:#8a8a8a;
-    $sizeparallax: 85vh;
+     $sizeparallax: 85vh;
+     $greycolor: #282828;
 
 ///////////variables////////
+
+
+@font-face {
+    font-family:fuente1;
+    src: url(../font-A/MYRIADPRO-REGULAR.OTF);
+}
+
+
+
 
 
 
@@ -56,7 +69,9 @@ body{
 
 
 
-
+.bgRayas{
+    background-color: rgba(0,0,0,0.25098);
+}
 
 
 //menu nuevo 
@@ -97,10 +112,11 @@ body{
 	 border-bottom: 2px solid $rojo-t;
 	 background-color: #fff;
 	 
-	 h2 {
-		  font-size: 2.5em;
-		  color: #8a8a8a;
-		  text-shadow: 1px 0 #000
+	 h2 {    
+            font-size: 2.5em;
+            color: #8a8a8a;  
+            font-weight: 800;
+         
 	}
 }
 
@@ -116,9 +132,9 @@ body{
 
 .manifiesto-texto{
 	padding: 5vh 0;
-	background-image: url(../icon/Lineas-01.png);
 	background-repeat: repeat;
-   
+    background-color: #282828;
+                                    
 	
 
 	.manifiesto-cont-p{  
@@ -178,13 +194,13 @@ body{
 		display: grid;
 		background-color: #8a8a8a;
 		grid-template-columns: 1fr 1fr 1fr ;
-		grid-auto-rows: 60vh;
+        grid-auto-rows: 23rem;
 		padding:5px ;
 		
         
         
 		.evento{
-            
+            cursor: pointer;
             &img{
                 width: 100%;
                 height: 100%;
@@ -203,7 +219,9 @@ body{
 
 
 
-
+body{
+    font-family: fuente1;
+}
 
 
 
@@ -334,7 +352,7 @@ body{
 
 	.proyectos{
 		&-img{
-			background-image: url(../img/eventos.jpg);
+			background-image: url(../img/eventos2.jpg);
 			background-size: cover;
 			background-attachment: fixed;
 			background-position: center;
@@ -526,8 +544,7 @@ body{
 	grid-template-rows: 1fr 2fr 2fr 1fr;
 	grid-gap: 50px;
 	justify-content: center;
-	background-image: url(../icon/Lineas-01.png);
-	
+	background-color: $greycolor;
     
     
     &-text{
@@ -593,10 +610,13 @@ body{
         .socialF{
             flex-direction: row-reverse;
             
-            .redS:hover{
-                    background: $rojo-linea;
+            .redS{
+                    background: $rojo-t;
                     border-radius: 50%;
-            }     
+            }   
+            .redS:hover{
+                transform: scale(1.1, 1.1)
+            }
         }                
     }
 
@@ -609,10 +629,9 @@ body{
 .Formularios{ 
     width: 90%;
     position: sticky;
-    top: 25%;
+    top: 25%;S
     form{
-        background-image: url(../icon/Lineas-01.png);
-        box-shadow: 2px 5px 10px 4px #000;
+        box-shadow: 2px 5px 10px 4px #141414;
         padding: 40px;
         transition: all .35s linear; 
         
@@ -621,6 +640,7 @@ body{
         }
     }          
 }
+
 
 
 
@@ -822,9 +842,9 @@ body{
 
 .lineaT{
    position: absolute;
-    right: -8%;
+    right: -9%;
     height: 8rem;
-    top: 13%;
+    top: 7%;
     
     img{
         height: 100%;
@@ -834,6 +854,17 @@ body{
 
 //    pc size
 @media only screen and (max-width: 991px){
+     .event{
+        grid-gap: 1rem
+    }
+    
+    .event-body-galery-fotos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+  
+    
+    
     .orgiaCultural-eventos{
         grid-template-columns: 1fr 1fr !important;
     }
@@ -863,6 +894,25 @@ body{
 
 
 @media only screen and (max-width: 768px){
+    //eventos tab
+    .event{
+        grid-template-columns: auto !important;
+        grid-gap: 1rem;
+            
+        &-body{
+            padding: 20px 1.2rem !important;
+        }
+    }
+    
+    .event-body-galery-fotos {
+    display: grid;
+    grid-template-columns: 1fr 1fr !important;
+    }
+    
+    .event-lateral {
+    display: none !important;
+    }
+  
     .caminemos-img{
         background-position: 29%, 0;
     }
@@ -971,12 +1021,68 @@ body{
 
 
 
-
 @media only screen and (max-width: 590px){
-    .contenidos-img{
-        background-position: right;
+    .menu .menu-naveg-link a h2 {
+    margin: 0px !important;
+        font-size: 1.5rem !important;}
+    
+    
+    .lineaT{
+        display: none !important;
     }
     
+    .copysPortada h4 {
+    font-size: .7rem !important; 
+    }
+    
+    
+    .event-body-article h1 {
+       font-size: 2rem !important;
+    }
+    
+    .event-body-article h4 {
+    font-size: 1.2rem !important;
+    }
+    
+    .event{
+        grid-template-columns: auto !important;
+        grid-gap: 0 !important;
+        
+        &-body{
+                padding: 6rem 1.2rem !important;
+        }
+    }
+    
+    .event-body-galery-fotos {
+    display: grid;
+    grid-template-columns: 1fr  !important;
+    }
+    
+    .event-lateral {
+    display: none !important;
+    }
+    
+    
+    .event-head .event-head-migas {
+        position: absolute;
+        bottom: -171% !important;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+        .breadcrumb{
+            margin-bottom: 0;
+            display: flex
+        }
+        
+        .dropdown{
+                display: flex ;
+                justify-content: center;
+        }
+    }
+    
+    
+           
     .orgiaCultural .orgiaCultural-img{
         background-position: left !important;
     }
@@ -998,6 +1104,7 @@ body{
         }
     }
     .proyectos-contenido{
+            width: 100%;
         .proyecto-titulo{
             text-align: right;
             font-size: 1.2rem;
@@ -1005,7 +1112,7 @@ body{
             display: flex;
         }
         .proyecto-descripcion{
-                width: 45%;
+                width: 40%;
             span{
                 font-size: .80rem,
             }
@@ -1033,6 +1140,541 @@ body{
     
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////    EVENTOS    ///////////////////////////////////////
+
+
+
+//contenedor de los eventos 
+.event{
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    grid-template-rows: 10vh auto;
+    grid-gap: 2rem;
+    
+    &-head{
+        grid-column: 1/3;
+        grid-row: 1;
+        display: flex;
+        
+        align-items: center;
+        background-color: #000;
+        position: relative;
+        
+        .event-head-migas{
+            position: absolute;
+            bottom: -106%;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            ol{
+                background-color: #c7c7c714 !important;
+            }
+            
+            .dropdown{
+                margin: 5px 15px;
+                font-style: italic;
+                font-weight: 600;
+                
+                .btn{
+                    background: #141414;
+                    font-style: italic;
+                    font-weight: 500;
+                }
+                
+                &-menu{
+                    left: -25% !important;
+                    background-color: #141414;
+                    a{
+                        color: white;
+                        font-style: italic;
+                        font-weight: 500;
+                    }
+                    a:hover{
+                        color: #000;
+                    }
+                }
+                
+                
+                .btn:hover{
+                    background: #000
+                }
+            }
+            
+            
+            
+        }
+    }
+
+    &-body{
+        grid-column: 1/2;
+        grid-row: 2;
+        padding: 0 4rem;
+
+        &-article{
+            margin: 2rem 0;
+
+            h1{
+                font-size: 3rem;
+                font-style: italic;
+                font-weight: 700;
+            }
+            h4{
+                font-size: 1.4rem;
+                color: $rojo-t;
+                line-height: .5;
+                margin-left: 15px;
+            }
+            
+            &-text{
+                margin: 3rem 0 1rem 0 ;
+                font-size: 0.92rem;
+                font-style: italic;
+            }
+            
+            &-redes{
+                display: flex;
+                color: red;
+                .redS{
+                    img{
+                        width: 2rem;
+                        height: auto;
+                        margin: 0 5px;
+                        border-radius: 50%;
+                        transition: all .25s ;
+                    
+                        &:hover{
+                            background-color: $rojo-t;
+                        }
+                    }
+                        
+                }
+            }
+            
+            
+            
+        }
+        
+        
+        &-galery{
+            margin: 2rem 0;
+            box-shadow: 5px 4px 9px rgba(0, 0, 0, 0.250);
+            &-header{
+                padding: 5px 3rem;
+                position: relative;
+                background-color: #000;
+                span{
+                    
+                    font-size: 1.2rem;
+                    color: white;
+                    font-style: italic;
+                    font-weight: 700;
+                    
+                }
+            }
+            
+            &-fotos{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-auto-rows: 1fr;
+                grid-gap: 5px;
+                
+                
+                &-img{
+                    height: 11rem;
+                    background-color: cadetblue;
+                    cursor: pointer
+                }
+            }
+        }
+    }
+
+    .aside{
+        grid-column: 2/3;
+        grid-row: 2/3
+    }    
+}
+
+.porIcon{
+    font-size: 1.8rem !important ;
+    line-height: 1.1 !important;
+    font-weight: 900 !important;
+    color: red !important;
+    position: absolute;
+    left: 5px;
+}
+
+
+
+////////////aside menu lateral
+.colapsable{
+    display: none;
+}
+.event-lateral-masEventos , event-lateral-prensa{
+    margin: 2rem 0
+}
+
+.event-lateral{
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.lateralHeader{
+    background-color: #000;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-style: italic;
+    padding-left: 3.5rem;
+    position: relative;
+    display: flex;
+}
+
+.lateralBody{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+
+
+.lateralbody-evento{
+    position: relative;
+    padding: 9px;
+    border-bottom: gray 1px solid;
+    padding-left: 20px;
+    transition: all .25s linear;
+
+    &:hover{
+        border-bottom: $rojo-linea 1px solid;
+    }
+    
+    &:hover a {
+        transform: translateX(20px)
+    }
+    a{
+        width: 100%;
+        display: block;
+        transition: .25s all linear;
+
+    }
+    
+    span{
+        font-size: 1.1rem;
+        font-weight: 600;
+        font-style: italic
+    }       
+}
+
+.show-boton{
+    margin: .5rem auto;
+    width: 40%;
+    text-align: center;
+    color: $rojo-t;
+    cursor: pointer;
+    display: block;
+    font-weight: 600;
+    border-bottom: solid 1px transparent;
+    transition: all .5s linear ;
+    
+    &:hover{
+        border-bottom: solid 1px $rojo-linea;
+
+    }
+    
+    
+    
+}
+
+/// cajas de notas de prensa
+
+.notasPrensa{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    min-height: 17rem;
+    justify-content: space-around;
+    
+    
+    .notasPrensa-nota1{
+        background: rgb(212 , 0 , 51);
+    }
+    
+    .notasPrensa-nota2{
+        background-color: rgb(122 , 122, 122);
+    }
+    
+    
+    .notasPrensa-nota1 , .notasPrensa-nota2{
+        height:6rem;
+        position: relative;
+        display: flex;
+        
+        .notaTitle{
+            font-size: 1.5rem;
+            color: #fff;
+            font-weight: 800;
+            font-style: italic;
+            display: flex;
+            justify-content: center;
+            width: 100%;  
+        }
+        
+        .nota-content{
+            width: 100%;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            padding: 5px;
+            position: absolute;
+            top: 40%;
+            font-weight: 600;
+            font-style: italic;
+            
+            
+            
+        }        
+    }
+    
+}
+//etilos de los eventos visibles solo en movil
+.orgiaCultural-eventosMovil{
+    background-color: #000;
+    display: none;
+}
+
+.eventoMovil{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh 0;
+    
+    a{ 
+        padding: 0 5%;
+        border-bottom: 1px gray solid;
+        transition: all .35s linear;
+        
+        &:hover{
+            border-bottom: 1px $rojo-linea solid;
+ 
+        }
+        
+        span{
+            font-size: 1.5rem;
+            font-style: italic;
+            color:$grey;
+
+        }
+    }
+    span{
+        color: $rojo-t ;
+        font-size: 1rem;
+        font-style: italic;
+
+    }
+}
+
+
+
+
+
+///////////////////////////////medias query responsive change2 ///////////////////////
+
+@media only screen and (max-width: 590px){
+    
+    
+    .manifiesto-texto{
+        display: none !important;
+    }
+    
+    
+    .orgiaCultural-eventosMovil{
+        display: block !important;
+    }
+    
+    .orgiaCultural-eventos{
+        display: none !important;
+    }
+    
+    .cuerpo-proyecto{
+        height: auto !important
+    } 
+    
+    //proyectos
+    .proyectos-contenido {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: auto !important;
+        flex-wrap: nowrap;
+        
+        .proyecto-separador{
+            display: none;
+        }
+    
+        .proyecto-titulo{
+                display: flex;
+                font-size: 2rem;
+        }
+        .proyecto-descripcion {
+            margin: 0 15%;
+            width: auto;
+            text-align: center;
+            border-bottom: 2px solid red;
+            padding-bottom: 20px;
+        }
+    }
+    
+    .contenidos-queHacemos{
+        grid-template-columns: .5fr 4fr .5fr !important;
+        
+         .sombra {
+             display: block;
+            width: 100%;
+            height: 30px;
+            grid-column: 1/4;
+        }
+    }
+    
+    .contenidos-queHacemos-text{
+        position: relative;
+        padding-bottom: 15px;
+        padding-left: 0;
+        justify-content: center;
+        
+        img{
+            display: none !important;
+        }
+        
+        span{
+                font-size: 1.5rem;
+                font-weight: 500; 
+                text-align: center;
+        }
+        div{
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            width: 25%;
+            height: 2px;
+            background: red;
+        }
+        
+       
+    }
+    
+    
+    .footPage{
+        padding: 0;
+        &-text{
+               display: flex;
+                justify-content: space-around; 
+                text-align: center;
+            
+            span{
+                    font-size: 2.3rem;
+                    text-align: center;
+                    font-style: italic;
+            }
+        }
+        
+        &-contact{
+            text-align: center;
+        }
+        
+        .socialF {
+            justify-content: center;
+        }
+        
+        &-form{
+            margin: 15px 0;
+            .Formularios{
+                width: 100%;
+                .botonSend{ 
+                        background: rgb(160,0,0); /* Old browsers */
+                        background: -moz-linear-gradient(left, rgba(160,0,0,1) 0%, rgba(204,0,0,1) 65%, rgba(183,0,116,1) 100%); /* FF3.6-15 */
+                        background: -webkit-linear-gradient(left, rgba(160,0,0,1) 0%,rgba(204,0,0,1) 65%,rgba(183,0,116,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                        background: linear-gradient(to right, rgba(160,0,0,1) 0%,rgba(204,0,0,1) 65%,rgba(183,0,116,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    
+                
+                    
+                    width: 100%;
+                    border-radius: 5px;
+                    font-style: italic;
+                    transition: .5s all linear;
+                }
+            }
+        }
+            
+    }
+    
+    .titulo {
+        font-size: 12vw;
+        font-weight: 600 !important;
+        text-align: center;
+    }
+    
+}
+@media only screen and (max-width: 768px){   
+    
+    .orgiaCultural-eventosMovil{
+        display: block !important;
+    }
+    
+    .orgiaCultural-eventos{
+        display: none !important;
+    }
+    .manifiesto-img , .orgiaCultural-img , .caminemos-img , .proyectos-img, .contenidos-img , .ConNosotros-img{
+        background-attachment: scroll !important;
+        height:  $sizeparallax / 2 !important ;   
+    }  
+    
+    
+    
+    
+    
+    
+}
+
+
+@media only screen and (max-width: 991px){}
+
+
+.contenidos-queHacemos{
+    
+    .sombra{
+        display: none;
+    }
+} 
+
+
+
+//botones alert
+.botonAlert{
+    position: absolute;
+    bottom: -5rem;
+    display: none;
+    right: 35%;
+    
+    button{
+        display: flex;
+        align-items: center;
+    }
+}
 
 
 
@@ -1041,10 +1683,69 @@ body{
 
 
 
+  // abrir foto styles
+
+@keyframes goImg{
+    0%{transform: scale(0)}
+    50%{transform: scale(1.2 , 1.2)}
+    100%{transform: scale(1 , 1)}
+}
 
 
+.openImg{
+    
+    background-color: rgba(20, 20, 20, 0.8);
+    width: 70vw;
+    height: 80vh;
+    left: 15%;
+    top: 10%;
+    position: fixed;
+    z-index: 5;
+    box-shadow: rgba(0, 0, 0, 0.22) 16px 9px 40px 50px;
+    border-radius: 15px ;
+    animation-name: goImg;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out
+
+    
+    
+    
+}
+.openImg img {
+    vertical-align: middle;
+    object-fit: contain;
+    border-style: none;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
 
 
+.closeBoton {
+    background-color: #fff;
+    right: 15%;
+    position: fixed;
+    padding: 0 10px;
+    font-weight: 800;
+    font-size: 1rem;
+    top: 10%;
+    z-index: 7;
+    cursor: pointer;
+    display: none;   
+    border-radius: 5px;
+    color: #ff043a;
+    border: 3px solid transparent;
+    transition: all .25s linear 
+}
 
+.closeBoton:hover{
+    background-color: #ff043a;
+    border: 1px solid #fff;
+    color: #fff;
+}
 
-
+.Formularios {
+    box-shadow: 6px 6px 20px 0px #141414;
+    padding: 10px 0;
+}

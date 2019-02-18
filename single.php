@@ -81,6 +81,7 @@ while(have_posts()) {
               <img style="width: 100%; height: 100%;" src="<?php echo $full_image_url; ?>" alt="<?php echo $title; ?>" >
             </div>
           <?php } ?>
+            <div class="closeBoton "><span>X</span></div>
           </div>
         </div>
         <?php } ?>
