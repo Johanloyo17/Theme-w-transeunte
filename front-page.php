@@ -11,7 +11,11 @@ while(have_posts()) { the_post();
         <div class="mascaraMenu2"></div>
         <div class="logoMenu ml-3">
           <a href="<?php echo site_url(); ?>">
-              <img src="<?php echo get_theme_file_uri('/images/icon/Transeunte-04.png')?>" alt="Logo Transeúnte">
+              <img 
+                src="<?php echo get_theme_file_uri('/images/icon/Transeunte-04.png')?>"
+                alt="Logo Transeúnte"
+                title="Logo Transeúnte"
+              >
           </a>
         </div>
         <div
@@ -28,7 +32,11 @@ while(have_posts()) { the_post();
           </p>
           <h4>AGENCIA DE CONTENIDOS CULTURALES</h4>
           <div class="lineaT">
-            <img src="<?php echo get_theme_file_uri('/images/icon/Linea2-01.png') ?>" alt="Linea">
+            <img
+              src="<?php echo get_theme_file_uri('/images/icon/Linea2-01.png') ?>"
+              alt="Linea"
+              title="Linea"
+            >
           </div>
         </div>
       </div>
@@ -70,9 +78,19 @@ while(have_posts()) { the_post();
     <!-- Manifiesto -->
     <section id="manifiesto" class="manifiesto ">
       <div class="manifiesto-titulo container-fulid d-flex flex-column align-items-center  justify-content-center bg-light">
-        <img src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>" alt="Sombra" class="sombra " />
+        <img
+        src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>"
+        alt="Sombra"
+        class="sombra"
+        title="Sombra"
+        />
         <h2>Manifiesto</h2>
-        <img src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>" alt="Sombra" class="sombra " />
+        <img
+        src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>"
+        alt="Sombra"
+        class="sombra"
+        title="Sombra"
+        />
       </div>
       <div class="manifiesto-img"></div>
       <div class="bgRayas manifiesto-texto font-italic">
@@ -174,14 +192,24 @@ while(have_posts()) { the_post();
     <section id="caminemos" class="caminemos container-fluid">
       <div class="caminemos-img"></div>
       <div class="caminemos-text d-flex justify-content-center flex-column align-items-center ">
-        <img src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>" alt="Sombra" class="sombra " />
+        <img
+          src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>"
+          alt="Sombra"
+          class="sombra"
+          title="Sombra"
+          />
         <div>
           <p>
           Cualquier lugar es nuestra casa. <br />
             Si abres la puerta posiblemente te costará decirnos adiós.
           </p>
         </div>
-        <img src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>" alt="Sombra" class="sombra " />
+        <img
+        src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>"
+        alt="Sombra"
+        class="sombra"
+        title="Sombra"
+        />
       </div>
       <div class="proyectos">
         <div class="proyectos-img"></div>
@@ -190,7 +218,11 @@ while(have_posts()) { the_post();
             <div class="proyectos-contenido  row">
               <div class="proyecto-titulo ">Literatura</div>
               <div class="proyecto-separador">
-                <img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="Linea" />
+                <img
+                  src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>"
+                  alt="Linea"
+                  title="Linea"
+                  />
               </div>
               <div class="proyecto-descripcion">
                 <span> Presentaciones de libros, talleres y conversatorios </span>
@@ -198,21 +230,39 @@ while(have_posts()) { the_post();
             </div>
             <div class="proyectos-contenido ">
               <div class="proyecto-titulo">Música</div>
-              <div class="proyecto-separador"><img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="Linea" /></div>
+              <div class="proyecto-separador">
+                <img
+                  src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>"
+                  alt="Linea"
+                  title="Linea"
+                  />
+              </div>
               <div class="proyecto-descripcion">
                 <span> Mini conciertos acústicos y clínicas musicales </span>
               </div>
             </div>
             <div class="proyectos-contenido">
               <div class="proyecto-titulo">Cine y fotografía</div>
-              <div class="proyecto-separador"><img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="Linea" /></div>
+              <div class="proyecto-separador">
+                <img
+                  src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>"
+                  alt="Linea"
+                  title="Linea"
+                  />
+              </div>
               <div class="proyecto-descripcion">
                 <span> Cine foros, talleres, exposiciones y recorridos fotográficos. </span>
               </div>
             </div>
             <div class="proyectos-contenido">
               <div class="proyecto-titulo">Artes plásticas</div>
-              <div class="proyecto-separador"><img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="Linea" /></div>
+              <div class="proyecto-separador">
+                <img
+                  src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>"
+                  alt="Linea"
+                  title="Linea"
+                  />
+              </div>
               <div class="proyecto-descripcion">
                 <span> Exposiciones, shows de arte en vivo y talleres. </span>
               </div>
@@ -227,45 +277,100 @@ while(have_posts()) { the_post();
       <div class="contenidos-img bg-danger"></div>
 
       <div class="contenidos-text font-italic">
-        <img src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>" alt="Sombra" class="sombra " />
+        <img
+          src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>"
+          alt="Sombra"
+          class="sombra"
+          title="Sombra"
+          />
         <p>
           Nos inspiramos en perfiles reales que se cruzan en tu camino y los convertimos en
           personajes. Dinos quiénes son, el resto se lo dejamos a la imaginación.
         </p>
         <span> ¡Contamos historias para conectar! </span>
-        <img src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>" alt="Sombra" class="sombra " />
+        <img
+          src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>"
+          alt="Sombra"
+          class="sombra"
+          title="Sombra"
+          />
       </div>
       <div class="contenidos-queHacemos font-italic ">
         <div class="contenidos-queHacemos-text wow slideInUp">
-          <img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="Linea" />
+          <img
+            src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>"
+            alt="Linea"
+            title="Linea"
+            />
           <span>Creación de campañas</span>
           <div class="lineaContenidos"></div>
         </div>
-        <img src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>" alt="Sombra" class="sombra " />
+        <img
+          src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>"
+          alt="Sombra"
+          class="sombra"
+          title="Sombra"
+          />
         <div class="contenidos-queHacemos-text wow  slideInUp ">
-          <img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="Linea" />
+          <img
+            src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>"
+            alt="Linea"
+            title="Linea"
+            />
           <span>Creación de personajes</span>
           <div class="lineaContenidos"></div>
         </div>
-        <img src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>" alt="Sombra" class="sombra " />
+        <img
+          src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>"
+          alt="Sombra"
+          class="sombra"
+          title="Sombra"
+          />
         <div class="contenidos-queHacemos-text wow  slideInUp ">
-          <img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="Linea" />
+          <img
+            src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>"
+            alt="Linea"
+            title="Linea"
+            />
           <span>Redacción y diseño gráfico de publicaciones para redes sociales.</span>
           <div class="lineaContenidos"></div>
         </div>
-        <img src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>" alt="Sombra" class="sombra " />
+        <img
+          src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>"
+          alt="Sombra"
+          class="sombra"
+          title="Sombra"
+          />
         <div class="contenidos-queHacemos-text wow  slideInUp ">
-          <img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="Linea" />
+          <img
+            src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>"
+            alt="Linea"
+            title="Linea"
+            />
           <span>Redacción y diseño gráfico de blogs, email marketing y sitios web.</span>
           <div class="lineaContenidos"></div>
         </div>
-        <img src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>" alt="Sombra" class="sombra " />
+        <img
+          src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>"
+          alt="Sombra"
+          class="sombra"
+          title="Sombra"
+          />
         <div class="contenidos-queHacemos-text wow  slideInUp ">
-          <img src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>" alt="Linea" />
+          <img
+            src="<?php echo get_theme_file_uri('images/icon/Linea2-01.png') ?>"
+            alt="Linea"
+            title="Linea"
+            />
           <span> Redacción y edición de contenido para vídeos</span>
           <div class="lineaContenidos"></div>
         </div>
-        <img src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>" alt="Sombra" class="sombra " />
+        <img
+          src="<?php echo get_theme_file_uri('images/icon/Separador.png') ?>"
+          alt="Sombra"
+          class="sombra"
+          title="Sombra"
+          />
       </div>
     </section>
     <!--  FIN contenidos y ¡Que hacemos? -->
@@ -288,17 +393,29 @@ while(have_posts()) { the_post();
         <div class="socialF d-flex ">
           <div class="redS  mx-2">
             <a href="https://www.facebook.com/transeuntehabla/">
-              <img src="<?php echo get_theme_file_uri('images/icon/Redes Sociales F.png') ?>" alt="Icono Facebook" />
+              <img
+                src="<?php echo get_theme_file_uri('images/icon/Redes Sociales F.png') ?>"
+                alt="Icono Facebook"
+                title="Icono Facebook"
+                />
             </a>
           </div>
           <div class="redS  mx-2">
             <a href="https://www.linkedin.com/company/transeuntehabla/">
-              <img src="<?php echo get_theme_file_uri('images/icon/Redes Sociales in.png') ?>" alt="Icono LinkedIn" />
+              <img
+                src="<?php echo get_theme_file_uri('images/icon/Redes Sociales in.png') ?>"
+                alt="Icono LinkedIn"
+                title="Icono LinkedIn"
+                />
             </a>
           </div>
           <div class="redS  mx-2">
             <a href="https://www.instagram.com/transeuntehabla/">
-              <img src="<?php echo get_theme_file_uri('images/icon/Redes Sociales I.png') ?>" alt="Icono Instagram" />
+              <img
+                src="<?php echo get_theme_file_uri('images/icon/Redes Sociales I.png') ?>"
+                alt="Icono Instagram"
+                title="Icono Instagram"
+                />
             </a>
           </div>
         </div>
