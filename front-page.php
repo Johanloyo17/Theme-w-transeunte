@@ -124,7 +124,13 @@ while(have_posts()) { the_post();
         ));
         while($homepagePosts->have_posts()) { $homepagePosts->the_post(); ?>
         <div class="evento">
-          <div class="eventoimg"><?php the_post_thumbnail(); ?></div>
+          <div class="eventoimg">
+            <?php
+            the_post_thumbnail('post-thumbnail', array(
+              'title' => get_the_title(get_post_thumbnail_id(get_the_id()))
+              ));
+            ?>
+          </div>
           <div class="evento-title font-italic">
             <span class="mx-auto"> <?php echo get_the_title(); ?> </span>
             <div class="evento-title-verMas btn btn-light">
