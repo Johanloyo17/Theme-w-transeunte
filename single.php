@@ -75,10 +75,15 @@ while(have_posts()) {
           <?php
           foreach($images as $image) {
             $full_image_url= $image['sizes']['large'];
-            $title = $image['title']; 
+            $title = $image['title'];
+            $alt = $image['alt']; 
           ?>
             <div class="event-body-galery-fotos-img">
-              <img style="width: 100%; height: 100%;" src="<?php echo $full_image_url; ?>" alt="<?php echo $title; ?>" >
+              <img
+                style="width: 100%; height: 100%;"
+                src="<?php echo $full_image_url; ?>"
+                alt="<?php echo $alt; ?>"
+                title="<?php echo $title">
             </div>
           <?php } ?>
             <div class="closeBoton "><span>X</span></div>
