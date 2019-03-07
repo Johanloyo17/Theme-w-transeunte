@@ -90,7 +90,7 @@ while(have_posts()) {
         <div class="event-lateral mr-lg-4 mr-2">
           <div class="event-lateral-masEventos">
             <div class="lateralHeader">
-              <span class="porIcon">***</span> <span><?php echo 'Mas ' . get_post_type() . 's' ?></span>
+              <span class="porIcon">***</span> <span><?php echo 'Más ' . get_post_type() . 's' ?></span>
             </div>
             <div class="lateralbody">
               <?php

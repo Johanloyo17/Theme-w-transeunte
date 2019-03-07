@@ -155,7 +155,7 @@ while(have_posts()) { the_post();
               <?php } ?>
               </p>
               <a class="evento-content-text-link btn btn-dark w-100 font-italic " href="<?php echo get_permalink(); ?>">
-                Ver evento
+                Ir a evento
               </a>
             </div>
           </div>
