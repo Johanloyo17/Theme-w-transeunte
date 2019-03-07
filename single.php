@@ -24,18 +24,24 @@ while(have_posts()) {
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Más eventos
+              <?php echo 'Más ' . get_post_type() . 's' ?>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">La Mezcolanza</a>
-              <a class="dropdown-item" href="#">El cruzado criollo</a>
-              <a class="dropdown-item" href="#">Te tengo un cuento</a>
-              <a class="dropdown-item" href="#">La calle habla</a>
-              <a class="dropdown-item" href="#">Barrio venezolano</a>
-              <a class="dropdown-item" href="#">Miscelánea</a>
-              <a class="dropdown-item" href="#">Échanos tu cuento</a>
-              <a class="dropdown-item" href="#">Sexontológico en Madrid</a>
-              <a class="dropdown-item" href="#">[a love supreme]</a>
+              <?php
+                $morePosts = new WP_Query(array(
+                  'post_type' => get_post_type(),
+                  'posts_per_page' => 8,
+                  'post__not_in' => array(get_the_ID())
+                ));
+                while($morePosts->have_posts()) { 
+                  $morePosts->the_post();
+              ?>
+                <a
+                  class="dropdown-item"
+                  href="<?php echo get_permalink() ?>"
+                  ><?php echo get_the_title() ?>
+                  </a>
+                <?php } wp_reset_postdata(); ?>
             </div>
           </div>
         </nav>
@@ -51,7 +57,7 @@ while(have_posts()) {
           </div>
           <div class=" event-body-article-redes">
             <div class="redS">
-              <a target="_blank" href="https://www.facebook.com/somostranseunte/"> <img src="<?php echo get_theme_file_uri('images/icon/Redes Sociales F.png'); ?>" alt="" /> </a>
+              <a target="_blank" href="https://www.facebook.com/transeuntehabla/"> <img src="<?php echo get_theme_file_uri('images/icon/Redes Sociales F.png'); ?>" alt="" /> </a>
             </div>
 
             <div class="redS">
@@ -105,7 +111,7 @@ while(have_posts()) {
                 'post__not_in' => array(get_the_ID())
               ));
               $i = 0;
-              while($morePosts->have_posts()) { 
+              while($morePosts->have_posts()) {
                 $morePosts->the_post();
               ?>
               <?php if ($i === 4) { ?>
